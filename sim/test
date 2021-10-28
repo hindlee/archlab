@@ -1,0 +1,56 @@
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/outgen.c:FILE *outfile = NULL;
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/outgen.c:void outgen_init(FILE *arg_outfile, int arg_max_column, int arg_first_indent, int arg_other_indents) {
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/outgen.c:  outfile = arg_outfile;
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/outgen.c:  if (outfile == NULL)
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/outgen.c:    outfile = stdout;
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/outgen.c:    fprintf(outfile, "\n");
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/outgen.c:      fprintf(outfile, " ");
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/outgen.c:  fprintf(outfile, "%s", string);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/node.c:extern FILE *outfile;
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/node.c:    outgen_init(outfile, max_column, first_indent, other_indents);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/node.c:	fputs(qstring->sval, outfile);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/node.c:	fputs("\n", outfile);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/node.c: 	fputs(expr->sval, outfile);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:bool_t diff_mem(mem_t oldm, mem_t newm, FILE *outfile)
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:    for (pos = 0; (!diff || outfile) && pos < len; pos += 8) {
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:	    if (outfile)
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:		fprintf(outfile, "0x%.4llx:\t0x%.16llx\t0x%.16llx\n", pos, ov, nv);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:void dump_memory(FILE *outfile, mem_t m, word_t pos, int len)
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:	fprintf(outfile, "0x%.4llx:", pos+i);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:	    fprintf(outfile, " %.16llx", val);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:bool_t diff_reg(mem_t oldr, mem_t newr, FILE *outfile)
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:    for (pos = 0; (!diff || outfile) && pos < len; pos += 8) {
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:	    if (outfile)
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:		fprintf(outfile, "%s:\t0x%.16llx\t0x%.16llx\n",
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:void dump_reg(FILE *outfile, mem_t r) {
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:	fprintf(outfile, "   %s  ", reg_table[id].name);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:    fprintf(outfile, "\n");
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:	fprintf(outfile, " %llx", val);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:    fprintf(outfile, "\n");
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:bool_t diff_state(state_ptr olds, state_ptr news, FILE *outfile) {
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:	if (outfile) {
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:	    fprintf(outfile, "pc:\t0x%.16llx\t0x%.16llx\n", olds->pc, news->pc);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:	if (outfile) {
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:	    fprintf(outfile, "cc:\t%s\t%s\n", cc_name(olds->cc), cc_name(news->cc));
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:    if (diff_reg(olds->r, news->r, outfile))
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.c:    if (diff_mem(olds->m, news->m, outfile))
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/yas.c:FILE *outfile;
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/yas.c:	    print_code(outfile, savebytepos);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/yas.c:		    print_code(outfile, savebytepos);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/yas.c:	    print_code(outfile, bytepos);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/yas.c:	    print_code(outfile, bytepos);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/yas.c:    print_code(outfile, savebytepos);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/yas.c:      outfile = stdout;
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/yas.c:      outfile = fopen(outfname, "w");
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/yas.c:      if (!outfile) {
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/yas.c:    fclose(outfile);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/outgen.h:void outgen_init(FILE *outfile, int max_column, int first_indent, int other_indents);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/hcl.y:FILE *outfile;
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/hcl.y:    outfile = stdout;
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.h:bool_t diff_mem(mem_t oldm, mem_t newm, FILE *outfile);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.h:void dump_memory(FILE *outfile, mem_t m, word_t pos, int cnt);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.h:bool_t diff_reg(mem_t oldr, mem_t newr, FILE *outfile);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.h:void dump_reg(FILE *outfile, mem_t r);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/isa.h:bool_t diff_state(state_ptr olds, state_ptr news, FILE *outfile);
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/hcl.tab.c:FILE *outfile;
+/home/wenyan/Projects/cssappLab/archlab-handout/sim/misc/hcl.tab.c:    outfile = stdout;

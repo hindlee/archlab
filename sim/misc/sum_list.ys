@@ -1,0 +1,41 @@
+# Execution begins at address 0 
+	.pos 0
+	irmovq stack, %rsp  	# Set up stack pointer
+	call main		# Execute main program
+	halt			# Terminate program 
+
+# 内存区域 存放链表
+	.align 8
+ele1:
+    .quad 0x00a
+    .quad ele2
+ele2:
+    .quad 0x0b0
+    .quad ele3
+ele3:
+    .quad 0xc00
+    .quad 0
+#END
+
+main:
+    irmovq ele1,%rdi
+	call sum_list		
+    ret
+
+# long sum_list(long i)
+# ele1 in %rdi
+sum_list:
+    xorq %rax,%rax        # val=0
+loop:
+    mrmovq (%rdi),%r8  #读取node，val值到%r8 
+    addq %r8,%rax     #将结果加到return val中
+    mrmovq 8(%rdi),%rdi
+    jmp test        #跳转到test
+test:	
+    andq %rdi,%rdi  #设置 CC，当%rdi为0时，链表为结尾，结束
+    jne loop          # Stop when 0
+	ret                  # Return
+
+# Stack starts here and grows to lower addresses
+	.pos 0x200
+stack:
